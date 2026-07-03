@@ -1,1 +1,27 @@
+Cmd: echo "This is important data" > original.txt
+Observation: Created a new text file containing sample data to serve as the target for both hard and soft links.
 
+Cmd: ln original.txt hardlink.txt
+Observation: Created a hard link to the original file, meaning both filenames now point to the exact same underlying inode and data blocks.
+
+Cmd: ln -s original.txt softlink.txt
+Observation: Created a symbolic (soft) link, which acts merely as a shortcut pointing to the filename of the original file rather than the data itself.
+
+Cmd: ls -li original.txt hardlink.txt softlink.txt
+Observation: Used the -i flag to list the inode numbers, observing that the original and hard link share an inode, while the soft link has a unique one.
+
+Cmd: rm original.txt
+Observation: I deleted the original file to test how both types of links react when their source file is removed.
+
+Cmd: cat hardlink.txt
+     cat softlink.txt
+Observation: Reading the hard link succeeded because the data still exists, whereas reading the soft link failed (broken link) because its target filename is gone.
+
+
+Link Analysis Report:
+
+Inodes: original.txt and hardlink.txt shared the same inode [insert number], while softlink.txt had a different inode [insert number].
+
+Comparison: Hard links point directly to data on the disk, whereas symbolic links point to a file path.
+
+Conclusion: Deleting the original file breaks the symbolic link (rendering it useless), but the hard link retains the data because the system only frees the data blocks when the hard link count reaches zero.
