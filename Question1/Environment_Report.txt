@@ -1,17 +1,38 @@
-whoami
-Used this command to verify the current logged-in username for my account.
+1 Username and groups associated with your account:
+  abdul
+  abdul adm cdrom sudo dip plugdev users
 
-groups or id
-Executed this to see the user groups my account belongs to, which determines my system access levels.
+2 Current shell being used:
+  /bin/bash
 
-echo $SHELL
-Checked the $SHELL environment variable to identify the current command-line shell I am operating in (e.g., bash or zsh).
+3 Current working directory:
+  /home/abdul
 
-pwd
-The pwd command confirmed my present working directory, ensuring I know exactly where I am in the file system.
+4 List of files and directories in your workspace:
+  total 92
+  drwxr-x--- 8 abdul abdul  4096 Jun 21 03:25 .
+  drwxr-xr-x 3 root  root   4096 Oct 20  2025 ..
+  -rw------- 1 abdul abdul 38235 Jun 21 03:27 .bash_history
+  -rw-r--r-- 1 abdul abdul   220 Oct 20  2025 .bash_logout
+  -rw-r--r-- 1 abdul abdul  3771 Oct 20  2025 .bashrc
+  drwx------ 4 abdul abdul  4096 Oct 20  2025 .cache
+  drwx------ 3 abdul abdul  4096 Mar 16 17:45 .copilot
+  drwxr-xr-x 3 abdul abdul  4096 Oct 20  2025 .dotnet
+  -rw-rw-r-- 1 abdul abdul     0 Jul  3 15:13 .motd_shown
+  -rw-r--r-- 1 abdul abdul   807 Oct 20  2025 .profile
+  drwxr-xr-x 2 abdul abdul  4096 Mar 19 09:20 .redhat
+  -rw-r--r-- 1 abdul abdul     0 Oct 20  2025 .sudo_as_admin_successful
+  drwxr-xr-x 5 abdul abdul  4096 Oct 20  2025 .vscode-server
+  -rw-r--r-- 1 abdul abdul  1933 Jun 21 03:25 .wsl-config
+  drwxr-xr-x 9 abdul abdul  4096 Oct 20  2025 oracleJdk-25
 
-ls -la
-Used ls -la to list all files and directories in my workspace, including hidden files, along with their permissions.
+5 Network connectivity verification result:
+  PING google.com (142.251.223.14) 56(84) bytes of data.
+  64 bytes from cgk02s06-in-f14.1e100.net (142.251.223.14): icmp_seq=1 ttl=117 time=22.7 ms
+  64 bytes from cgk02s06-in-f14.1e100.net (142.251.223.14): icmp_seq=2 ttl=117 time=28.5 ms
+  64 bytes from cgk02s06-in-f14.1e100.net (142.251.223.14): icmp_seq=3 ttl=117 time=36.0 ms
+  64 bytes from cgk02s06-in-f14.1e100.net (142.251.223.14): icmp_seq=4 ttl=117 time=27.4 ms
 
-ping -c 4 google.com
-Sent four ICMP echo requests to a public domain to verify that the Linux system has active outbound network connectivity.
+  --- google.com ping statistics ---
+  4 packets transmitted, 4 received, 0% packet loss, time 3000ms
+  rtt min/avg/max/mdev = 22.682/28.666/36.028/4.784 ms
