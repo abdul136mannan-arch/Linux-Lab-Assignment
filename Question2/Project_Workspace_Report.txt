@@ -1,1 +1,27 @@
+1 Directory structure created:
+  0022
 
+  Command: mkdir -p project_workspace/{docs,code}
+  Observation: Created a main project directory containing two subdirectories (docs and code) simultaneously using the -p flag.
+
+
+4 Umask value used
+
+  Command: unmask
+  Observation: I checked the default system umask value to understand what base permissions are automatically assigned to newly created files.
+
+
+2 File permissions before and after modification:
+  -rw-r--r-- 1 abdul abdul 0 Jul  3 16:27 project_workspace/docs/plan.txt
+
+  Command: touch project_workspace/docs/plan.txt
+  Observation: Created a blank placeholder file named plan.txt to test file permission modifications.
+
+  Command: ls -l project_workspace/docs/plan.txt
+  Observation: Viewed the default permissions of the newly created file before making any security changes.
+
+  Command: chmod 600 project_workspace/docs/plan.txt
+  Observation: I restricted the file permissions so that only the owner can read and write to it, protecting the project data from other users.
+
+  Command: ls -l project_workspace/docs/plan.txt
+  Observation: I re-checked the file to observe and confirm that the new, restrictive permissions were successfully applied.
