@@ -1,1 +1,22 @@
+Cmd: lsof -u $(whoami) | head -n 15
+Observation: Listed the first 15 open files associated with my specific user account to observe how Linux assigns file descriptors to running processes.
 
+Cmd: ls -l /etc/passwd /fake_directory > output.log 2> error.log
+Observation: Ran a command that produces both valid output and an error, redirecting standard output (descriptor 1) to output.log and standard error (descriptor 2) to error.log.
+
+Cmd: cat output.log and cat error.log
+Observation: Checked the contents of both log files to confirm that the system successfully separated standard execution results from error messages.
+
+Cmd: ulimit -a
+Observation: Checked all current resource limits for my user, including the maximum number of open file descriptors allowed (open files).
+
+
+I/O Investigation Report:
+
+Open Files Identified: Listed open files tied to my user session using lsof, observing various libraries and directories in use.
+
+I/O Redirection: Successfully separated standard output (descriptor 1) and standard error (descriptor 2) into distinct log files.
+
+Resource Limits: The maximum number of open files permitted for my user is [insert number from ulimit -n].
+
+Explanation: Linux manages file I/O by treating everything (files, directories, devices) as a file, assigning numerical descriptors (0, 1, 2) to track input, output, and errors independently.
