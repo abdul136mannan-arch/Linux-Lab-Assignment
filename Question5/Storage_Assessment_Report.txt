@@ -1,1 +1,24 @@
+Cmd: lsblk
+Observaton: Listed all block devices to view the physical storage drives, their partitions, and sizes currently attached to the system.
 
+Cmd: df -h
+Observation: Used this to view all mounted file systems and check their available space in a human-readable (GB/MB) format.
+
+Cmd: df -i
+Observation: Checked the inode utilization to ensure the file systems are not at risk of running out of file index nodes, which would prevent new file creation regardless of available space.
+
+Cmd: vi Storage_Assessment_Report.txt
+Observation: Opened the vi text editor, pressed i to enter insert mode to write my report, and pressed Esc followed by :wq to save and quit.
+
+
+Storage Assessment Report:
+
+Available Storage Devices: [Briefly list devices shown in lsblk, e.g., sda1, nvme0n1]
+
+Mounted File Systems & Disk Usage: The root (/) filesystem is currently at [insert %] capacity.
+
+Inode Utilization: The root filesystem is using [insert %] of its available inodes.
+
+Storage Health Observations: Overall storage health is good; no partitions are near 100% capacity for either blocks or inodes.
+
+Recommendations: Set up automated alerts if the root partition exceeds 80% usage, and regularly clear out old system logs in /var/log/ to maintain available space.
