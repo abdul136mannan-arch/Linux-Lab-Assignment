@@ -2,11 +2,26 @@
   abdul
   abdul adm cdrom sudo dip plugdev users
 
+  Command: whoami
+  Observation: Used this command to verify the current logged-in username for my account.
+
+  Command: groups
+  Observation: Executed this to see the user groups my account belongs to, which determines my system access levels.
+
+
 2 Current shell being used:
   /bin/bash
 
+  Command: echo $SHELL
+  Observation: Checked the $SHELL environment variable to identify the current command-line shell I am operating in (e.g., bash or zsh).
+
+
 3 Current working directory:
   /home/abdul
+
+  Command: pwd
+  Observation: The pwd command confirmed my present working directory, ensuring I know exactly where I am in the file system.
+
 
 4 List of files and directories in your workspace:
   total 92
@@ -26,6 +41,10 @@
   -rw-r--r-- 1 abdul abdul  1933 Jun 21 03:25 .wsl-config
   drwxr-xr-x 9 abdul abdul  4096 Oct 20  2025 oracleJdk-25
 
+  Command: ls -la
+  Observation: Used ls -la to list all files and directories in my workspace, including hidden files, along with their permissions.
+
+
 5 Network connectivity verification result:
   PING google.com (142.251.223.14) 56(84) bytes of data.
   64 bytes from cgk02s06-in-f14.1e100.net (142.251.223.14): icmp_seq=1 ttl=117 time=22.7 ms
@@ -36,3 +55,6 @@
   --- google.com ping statistics ---
   4 packets transmitted, 4 received, 0% packet loss, time 3000ms
   rtt min/avg/max/mdev = 22.682/28.666/36.028/4.784 ms
+
+  Command: ping -c 4 google.com
+  Observation: Sent four ICMP echo requests to a public domain to verify that the Linux system has active outbound network connectivity.
